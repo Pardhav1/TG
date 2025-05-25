@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-     "start": "node app.js",
-     "dev": "nodemon app.js",
+    "start": "node Backend/app.js",
+    "dev": "nodemon Backend/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -14,7 +14,6 @@
   "dependencies": {
     "@google/generative-ai": "^0.21.0",
     "axios": "^1.7.9",
-    "backend": "file:",
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
