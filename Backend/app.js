@@ -13,11 +13,17 @@ connectDB();
 
 // CORS Configuration - UPDATED
 const corsOptions = {
-  origin: ["http://localhost:3000", "http://127.0.0.1:3000",'http://127.0.0.1:5501','http://127.0.0.1:5500',"'http://127.0.0.1:5500'"],
+  origin: [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "http://127.0.0.1:5501",
+    "http://127.0.0.1:5500",
+    "https://tripguru-git-main-pardhav1s-projects.vercel.app",
+  ],
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   credentials: true,
   allowedHeaders: ["Content-Type", "Authorization"],
-  optionsSuccessStatus: 200 // For legacy browser support
+  optionsSuccessStatus: 200,
 };
 
 // Apply CORS middleware
