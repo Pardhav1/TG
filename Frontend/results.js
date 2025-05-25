@@ -31,14 +31,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
       showToast("Loading your itinerary...");
 
-      fetch("http://localhost:5000/api/ai/expense", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({ prompt }),
-      })
+      fetch(
+        "https://tripguru.onrender.comhttps://tripguru.onrender.com/api/ai/expense",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify({ prompt }),
+        }
+      )
         .then((response) => {
           if (response.status === 401) {
             showToast("Session expired. Please log in again.", "error");
