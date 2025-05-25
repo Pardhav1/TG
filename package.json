@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "@google/generative-ai": "^0.21.0"
+  },
+  "devDependencies": {
+    "@react-native-community/cli": "^18.0.0"
   }
 }
