@@ -390,7 +390,7 @@ circleContainer.addEventListener('click', () => {
     const password = document.getElementById('password').value;
 
     try {
-        const res = await fetch("http://localhost:5000/api/auth/login", {
+        const res = await fetch("https://tripguru.onrender.com/api/auth/login", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ email, password }),
@@ -422,7 +422,7 @@ circleContainer.addEventListener('click', () => {
 
     try {
         // Register the user
-        const res = await fetch("http://localhost:5000/api/auth/register", {
+        const res = await fetch("https://tripguru.onrender.com/api/auth/register", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ name, email, password }),
@@ -431,7 +431,7 @@ circleContainer.addEventListener('click', () => {
         const data = await res.json();
         if (res.ok) {
             // Automatically log in after registration
-            const loginRes = await fetch("http://localhost:5000/api/auth/login", {
+            const loginRes = await fetch("https://tripguru.onrender.com/api/auth/login", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ email, password }),
